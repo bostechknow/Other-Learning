@@ -6,7 +6,9 @@ echo "Creating basic K8s network"
 kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.23.0
 
 # Setup kube for command line use
-export KUBECONFIG=/etc/kubernetes/admin.conf
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # Setup networking pod
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
