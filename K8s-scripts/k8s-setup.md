@@ -12,6 +12,9 @@
     - 172.31.x.2  k8s-worker1
     - 172.31.x.3  k8s-worker2
 - Run the k8s-setup.sh as root
+    - `wget https://raw.githubusercontent.com/mbostic-test/Other-Learning/main/K8s-scripts/k8s-setup.sh`
+    - `wget https://raw.githubusercontent.com/mbostic-test/Other-Learning/main/K8s-scripts/k8s-admin-setup.sh`
+    - `chmod +x k8s-setup.sh`
     - `sudo ./k8s-setup.sh`
 - On the admin server, setup networking
     - `sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.23.0`
@@ -32,5 +35,12 @@
 
 - `kubectl get nodes`
 - `kubectl get pods`
+- `kubectl get pods -n kube-system`
 - `kubectl get service`
 - `kubectl describe service <my-service>`
+
+## Some useful K8s sites
+
+- https://kubernetes.io/docs/
+- https://github.com/kubernetes/
+- https://kubernetes.io/blog/
