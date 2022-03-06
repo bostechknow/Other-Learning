@@ -1,0 +1,37 @@
+# Useful terraform commands
+
+terraform state list                                    # list all resources
+terrafrom state show aws_vpc.btk_vpc                    # list details of one resource
+terraform show                                          # show full state details
+terraform fmt                                           # automate clean-up / formatting
+
+terraform console
+terraform apply -var="host_os=unix"
+terraform apply -var-file="dev.tfvars"
+terraform apply -refresh-only
+terraform output
+
+terraform init
+terraform plan
+terraform apply
+terraform apply -auto-approve
+terraform destroy
+terraform plan -destroy
+
+
+
+interpreter = ["Powershell", "-Command"]
+interpreter = ["bash", "-c"]
+
+
+Reference:
+https://github.com/morethancertified/rfp-terraform
+https://www.youtube.com/watch?v=iRaai1IBlB0&t=132s      # Learn Terraform (and AWS) by Building a Dev Environment – Full Course for Beginners
+
+
+Terraform Links:
+https://www.terraform.io/
+https://registry.terraform.io/browse/providers
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+https://registry.terraform.io/providers/hashicorp/google/latest/docs
